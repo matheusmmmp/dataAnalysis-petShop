@@ -1,9 +1,9 @@
 <h1 align="center">
-   📱 <a href="#"> Estudo de Modelos de Classificação de um DataSet de Telecomunicações </a>
+   📊 <a href="#"> Análise de Dados de PetShop através do Power BI </a>
 </h1>
 
 <h3 align="center">
-   Modelagem de dados em um cenário de uma empresa de Telecomunicações utilizando três tipos de modelo: o KNN, o Bernoulli Naive Bayes, as Árvores de decisão
+  Desenvolvimento e Visualização de uma Dashboard de uma PetShop através do Power BI
 </h3>
 
 <h4 align="center"> 
@@ -12,7 +12,7 @@
  
 <p align="center">
  <a href="#sobre-o-projeto">Sobre</a> •
- <a href="#funcionalidades">Funcionalidades</a> •
+ <a href="#estrutura-dos-dados">Dados</a> •
  <a href="#conclusão">Conclusão</a> •
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#licença">Licença</a>
@@ -21,40 +21,73 @@
 
 ## ✎Sobre o projeto
 
-Este notebook é uma forma de praticar meus conhecimentos em ciência de dados, principalmente com a **biblioteca de Machine Learning do SKLearn**. Ele nos orienta em um fluxo de trabalho para resolver um problema em um cenário de uma empresa de telecomunicações, onde atraves de algoritmos de classificação, sera possivel comparar e medir quais modelos serao mais uteis para o problema proposto.
-
-As informações que serão adquiridas através da analise dos dados são:
+Este projeto é uma forma de praticar meus conhecimentos em ciência de dados, principalmente com parte de **Business Intelligence no Power BI**. Ele nos orienta em um fluxo de trabalho para resolver um problema em um cenário de uma empresa de petshop, onde através dos dados fornecidos pelo suposto cliente, será necessário sanar algumas dores requisitadas pelo mesmo, tais como:
   - **Faturamento**: Entender o Faturamento total e também mensal do estabelecimento;
   - **Filtro**: Visualizar os dados e filtra-los através das marcas de produtos;
   - **Visualização**: Permitir visualizar quais produtos estão presentes em estoque e até mesmo visualizar o faturamento através de cada produto ou de todos.
   - **Distribuição de Dados**: Permitir identificar o interesse de determinado gênero para um produto.
   - **Análise de Tendência**: Através dos dados, permitir uma estratégia para gerir uma nova filial.  
 
-O principal objetivo deste notebook é servir como um guia de fluxo de trabalho passo a passo, permitindo que eu mesmo revise este caderno e sirva de estudo para casos futuros.
+O principal objetivo deste projeto é servir como um guia de fluxo de trabalho passo a passo, permitindo que eu mesmo revise este caderno e sirva de estudo para casos futuros.
 
 Este dashboard foi desenvolvido dentro do ambiente Power BI.
 
 ---
 
-## ⚙Funcionalidades
+## ⚙Estrutura dos Dados
+Os dados foram adquiridos através de 3 métodos diferentes. Os dados referentes aos processos de vendas em período anual estão dispostos em 3 documentos de extensão .xlsx. Para dados referentes a clientes, foram extraídos de um documento de extensão .txt e por fim, os dados referentes aos produtos foram adquiridos através de uma tabela online presente no seguinte link: [Tabela Produtos](https://docs.google.com/spreadsheets/d/e/2PACX-1vSi6zD0nOJDf4YVOBQVXuSpAwihl4i5H4vrv7PjM3y0l0M-oHOaWYRrVXrZ1o3TOUFNnzo3sSi9b0Pu/pubhtml) 
 
-- [x]  Pré-Processamento;
-- [x]  Modelo K-nearest neighbors (KNN);
-- [x]  Modelo Bernoulli Naive Bayes;
-- [x]  Modelo de Arvore de Decisão;
-- [x]  Validação dos modelos;
+```
+DataSets
+
+  -Clientes/
+    -ID Consumidor
+    -Genero
+    -Estado Civil
+    -Bairro
+    -Pets
+    
+  -Produtos/
+    -ID Produto
+    -Marca
+    -Nome Produto
+    -Url Img
+    -Valor
+    -Categoria
+    
+  -Vendas/
+    -vendas_2018/
+      -Transacao      	
+      -ID Consumidor
+      -ID Produto
+      -Quantidade
+      -Data de compra
+      -Valor
+    -vendas_2019/
+      -Transacao
+      -ID Consumidor
+      -...
+    -vendas_2020/
+      -Transacao
+      -ID Consumidor
+      -...
+      
+
+```
+
 
 ---
 
 ## 🔬Conclusão
 
-Dentre os modelos estudados, vale evidenciar que todos se destacaram em métrica em particular. Dentre os destaques estão:
+Através das estruturas de dados propostos, foi possível atender a todas as expectativas do exercício e assim gerar um Dashboard que permite visualizar e gerar um storytelling do comércio em questão.
+O Dashboard pode ser acessado através desse link:  [Alura Petshop](https://app.powerbi.com/view?r=eyJrIjoiNzJkZGYwMDAtZWFiZi00OTcxLTg0ZWMtNDAxODcyOTcwMzE3IiwidCI6ImQwOTEwZmZkLThhMzctNGJkYi1iYTY1LTdkMmQwZWI1N2RlOSIsImMiOjR9)
 
-  - **Precisão**: O melhor modelo para precisão foi a árvore de decisão com 79,73%;
-  - **Acurácia**: O melhor modelo para acurácia foi o KNN com 81,48%;
-  - **Recall**: O melhor modelo para Recall foi o Bernoulli com 84,24%;
-  
- Devido a natureza do problema proposto, a melhor métrica para classificação dos clientes é a **precisão**. Pois permite medir quantos valores positivos foram previstos de forma correta com um todo no nosso modelo, sem ser penalizado pela classificaçãos de valores negativos; Então o modelo escolhido para o problema será a  **Árvore de decisão**.
+E o projeto pode ser visualizado tanto em Desktop quanto em dispositivos móveis:
+<h1 align="center">
+  <img alt="Imagem Demonstrativa 1" title="#Img1" src="https://user-images.githubusercontent.com/33897566/228261270-aa052c98-04dc-42d7-ad09-4015a71124d3.PNG" style="width: 800px;" />
+  <img alt="Imagem Demonstrativa 2" title="#Img2" src="https://user-images.githubusercontent.com/33897566/228261321-37d2a287-b544-4da2-aedd-c29308d02519.PNG" style="width: 380px;" />
+</h1>
 
 ---
 
@@ -62,12 +95,7 @@ Dentre os modelos estudados, vale evidenciar que todos se destacaram em métrica
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
--   [Python](https://www.python.org/)
--   [SKLearn](https://scikit-learn.org/stable/user_guide.html)
--   [Seaborn](https://seaborn.pydata.org)
--   [KNN](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
--   [BernoulliNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html)
--   [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+-   [Power BI](https://powerbi.microsoft.com/pt-br/)
 
 ---
 
